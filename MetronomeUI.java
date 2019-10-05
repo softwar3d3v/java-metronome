@@ -16,17 +16,17 @@ import java.util.logging.Logger;
 import javax.sound.midi.*;
 
 import javax.swing.border.TitledBorder;
-public class Metronome extends JFrame {
+public class MetronomeUI extends JFrame {
     public static void main(String[] args) {
         Runnable app = new Runnable() {
             public void run() {
-                Metronome t = new Metronome();
+                MetronomeUI t = new MetronomeUI();
                 t.setVisible(true);
             }
         };
         SwingUtilities.invokeLater(app);
     }
-    public Metronome() {
+    public MetronomeUI() {
         super("Metronome App");
         // code that uses the look of the OS
         try {
@@ -94,5 +94,7 @@ public class Metronome extends JFrame {
     }
     public void generateBeats(double bpm, int duration) {
         System.out.println("Hello!");
+        System.out.println(bpm);
+        System.out.println(duration);
     }
 }
